@@ -12,7 +12,7 @@ Este relatório analisa as justificativas fornecidas pelo modelo LLM Qwen/QwQ-32
 
 **Modelo LLM:** Qwen/QwQ-32B-AWQ  
 **Configuração de Quantização:** AWQ de 4 bits  
-**Prompt Utilizado:** "Prompt Equilibrado com Auto-Avaliação e Formato Ultra-Reforçado V2"
+
 
 O prompt foi projetado com foco em:
 - Compatibilidade factual
