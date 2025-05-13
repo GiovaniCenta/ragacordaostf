@@ -4,6 +4,10 @@ import os
 import csv # Added for CSV output
 import datetime # Added for timestamp in filenames
 from dotenv import load_dotenv
+import nltk
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('wordnet')
 
 # Import new modules
 from src.data_loader import pdf_to_docs, load_document, split_text_into_paragraphs, _split_paragraphs_into_sentences # Added functions
@@ -135,7 +139,7 @@ def run_rag_pipeline():
     parser.add_argument("--reranker_n", type=int, default=5, help="Number of top candidates to keep after reranking for each claim.")
 
     # LLM Explainer parameters
-    parser.add_argument("--explainer_max_tokens", type=int, default=150, help="Max new tokens for LLM explanation for each claim.")
+    parser.add_argument("--explainer_max_tokens", type=int, default=3000, help="Max new tokens for LLM explanation for each claim.")
     parser.add_argument("--explainer_temperature", type=float, default=0.1, help="Temperature for LLM explanation generation for each claim.")
 
     args = parser.parse_args()

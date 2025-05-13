@@ -1,9 +1,7 @@
-# Base Dependencies (Keep existing relevant ones if any, e.g., pypdf)
-# Assuming pypdf2 or similar was used before, keep it if needed for load_data.py
-# pypdf2 
 
-# Specified versions and new packages
 pypdf2
+nltk
+autoawq
 sentence-transformers==2.7.0
 transformers
 torch 
@@ -14,11 +12,4 @@ accelerate
 chromadb
 scikit-learn
 python-dotenv
-streamlit # Keep if app.py is still relevant
-
-# Reranker specific (implicitly needed by sentence-transformers)
-# huggingface_hub 
-
-# Optional: Add other dependencies identified during refactoring if needed
-# faiss-cpu # Or faiss-gpu if used before and switching from ChromaDB? (Likely not needed with Cosmos)
-# nltk # If still used for sentence splitting somewhere 
+streamlit 
